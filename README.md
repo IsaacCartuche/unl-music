@@ -1,3 +1,6 @@
+Para la ejecución de prueba del programa por consola, se ha realizado una clase controladora llamada "PruebaEjec" en ella se encuentra especificado por partes la ejecución deseada
+
+
 # Unl Music README
 
 - [ ] TODO Replace or update this README with instructions relevant to your application
