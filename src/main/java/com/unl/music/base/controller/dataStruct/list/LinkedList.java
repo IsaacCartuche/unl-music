@@ -212,6 +212,65 @@ public class LinkedList<E> {
         }
     }
 
+
+    // metodo para convertir la lista enlazada a un arreglo para poder ser guardado en archivo .json
+    public E[] toArray(){
+        Class clazz = null;
+        E[] matriz = null;
+
+        if (this.length > 0){
+            clazz = head.getData().getClass();
+            matriz = (E[]) java.lang.reflect.Array.newInstance(clazz, this.length);
+
+            Node<E> aux = head;
+
+            for(int i = 0; i< length; i++){
+                matriz[i] = aux.getData();
+                aux = aux.getNext();
+            }
+
+        }
+
+        return matriz;
+    }
+
+
+
+
+    // meetodo que convierte un arreglo a una lista enlazada
+
+    public LinkedList<E> toList(E[] matriz){
+        clear();
+        for(int i = 0; i< length; i++){
+            this.add(matriz[i]);
+        }
+        return this;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public static void main(String[] args) {
         LinkedList lista = new LinkedList<>();
 
